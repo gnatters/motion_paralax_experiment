@@ -9,6 +9,8 @@ Jax.Controller.create "Parallax", ApplicationController,
     torus = new Jax.Model
       position: [0, 1, -7]
       mesh: new Jax.Mesh.Torus
+        sides: 32
+        rings: 64
         material: 'shiney'
     
     window.world = @world
