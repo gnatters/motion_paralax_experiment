@@ -1,17 +1,16 @@
 
 <div id="content">
-  
+
+<canvas id="webgl" width="1040" height="570" style="width:99%;">No WebGL for you, come back with a better browser!</canvas>
+
 <%= javascript_tag "
-$(document).ready(function(){
+$(document).ready(function(){setTimeout(function(){
   controller = 'parallax';
   canvas_id = 'webgl';
   
   if(!(canvas_id && controller)) return false;
   window.context = new Jax.Context(canvas_id);
   window.context.redirectTo(controller);
-});
+},100)});
 " %>
-
-<canvas id="webgl" width="640" height="470">No WebGL for you, come back with a better browser!</canvas>
-
 </div>
